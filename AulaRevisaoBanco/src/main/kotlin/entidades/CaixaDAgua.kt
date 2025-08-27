@@ -4,13 +4,7 @@ import enumeradores.Material
 import java.math.BigDecimal
 
 class CaixaDAgua(//os 2 parenteses Construtor da classe
-    val material: Material,
-    val capacidade: Int,
-    val peso: Double,
-    val preco: BigDecimal?,
-    val altura: Double,
-    val profundidade: Double,
-    val largura: Double,
+
     Material: Material,
     Capacidade: Int,
     Peso: Double,
