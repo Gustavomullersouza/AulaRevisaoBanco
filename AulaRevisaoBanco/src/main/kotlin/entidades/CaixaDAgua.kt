@@ -1,10 +1,6 @@
 package entidades
 
-import enumeradores.Funcao
 import enumeradores.Material
-import enumeradores.Nome
-import enumeradores.Setor
-import enumeradores.Sexo
 import java.math.BigDecimal
 
 class CaixaDAgua(//os 2 parenteses Construtor da classe
@@ -15,6 +11,13 @@ class CaixaDAgua(//os 2 parenteses Construtor da classe
     val altura: Double,
     val profundidade: Double,
     val largura: Double,
+    Material: Material,
+    Capacidade: Int,
+    Peso: Double,
+    Preco: BigDecimal,
+    Altura: Double,
+    Profundidade: Double,
+    Largura: Double,
 
     //val dimenssao : Array <Double>, // Altura, Largura. Profundidade
 

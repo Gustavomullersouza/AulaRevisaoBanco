@@ -1,5 +1,6 @@
 package crud
 
+import entidades.CaixaDAgua
 import enumeradores.Material
 
 fun cadastrarCaixa(){
@@ -33,6 +34,21 @@ fun cadastrarCaixa(){
 
     println("profundidade da caixa")
     val profundidade = readln().toDouble()
+
+    println("largura da caixa")
+    val largura = readln().toDouble()
+
+    //Salvar as variáveis agora dentro da classe
+    //conecte o atributo da classe a variavel que o usuario digitou
+    CaixaDAgua(
+        Material = material,
+        Capacidade = capacidade,
+        Peso = peso,
+        Preco = preco,
+        Altura = altura,
+        Profundidade = profundidade,
+        Largura = largura,
+        )
 
 }
 
