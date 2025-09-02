@@ -2,6 +2,40 @@ package crud
 
 import entidades.CaixaDAgua
 import enumeradores.Material
+import java.sql.Connection
+
+fun criarTabelaCaixa(){
+    val conectar = EntidadeJDBC(
+        url = "jdbc:postgresql://localhost:5432",
+        usuario = "postgres",
+        senha = "5432",//a senha de voces é essa -> postgres
+    )
+
+    //Material: Material,
+    //    Capacidade: Int,
+    //    Peso: Double,
+    //    Preco: BigDecimal,
+    //    Altura: Double,
+    //    Profundidade: Double,
+    //    Largura: Double,
+
+        //Coloque o nome da tabela o mesmo nome da entidade
+        val sql = "CREATE TABLE IF NOT EXISTS CaixaDAgua" +
+                "(id serial NOT NULL PRIMARY KEY" +
+                " Material varchar(255)," +
+                " Capacidade float," +
+                " Peso float," +
+                " Preco float, " +
+                " Altura float," +
+                " Profundidade float, " +
+                " Largura float" +
+                ")"
+//Cada Coluna da tabela precisa ter o mesmo no dos atributos da Entidade
+    val banco = conectar.conectarComBanco()
+    val enviarParaBanco = banco!!.createStatement().execute(sql)
+
+    println(enviarParaBanco)
+}
 
 fun cadastrarCaixa(){
     /*
