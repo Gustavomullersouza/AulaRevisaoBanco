@@ -35,6 +35,8 @@ fun criarTabelaCaixa(){
     val enviarParaBanco = banco!!.createStatement().execute(sql)
 
     println(enviarParaBanco)
+
+    banco.close()
 }
 
 fun cadastrarCaixa(){
