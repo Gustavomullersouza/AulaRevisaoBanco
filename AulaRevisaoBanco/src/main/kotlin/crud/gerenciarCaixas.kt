@@ -6,7 +6,7 @@ import java.sql.Connection
 
 fun criarTabelaCaixa(){
     val conectar = EntidadeJDBC(
-        url = "jdbc:postgresql://localhost:5432",
+        url = "jdbc:postgresql://localhost:5432/revisao",
         usuario = "postgres",
         senha = "5432",//a senha de voces é essa -> postgres
     )
